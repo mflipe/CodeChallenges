@@ -56,7 +56,6 @@
 import Foundation
 import XCTest
 
-
 // MARK: Solution 1
 /*
 func solution(_ input1: String, _ input2: String) -> Int {

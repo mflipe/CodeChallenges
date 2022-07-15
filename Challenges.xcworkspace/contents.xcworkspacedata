@@ -8,7 +8,10 @@
       location = "container:"
       name = "Clash of Code">
       <FileRef
-         location = "group:/Users/mini_01/Developer/Challenges/GolfCourse.playground">
+         location = "group:/Users/mini_01/Developer/CodeChallenges/TraveledDistance.playground">
+      </FileRef>
+      <FileRef
+         location = "group:GolfCourse.playground">
       </FileRef>
    </Group>
 </Workspace>
