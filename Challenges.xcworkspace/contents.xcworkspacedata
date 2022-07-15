@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:Example.playground">
+   </FileRef>
+   <Group
+      location = "container:"
+      name = "Clash of Code">
+      <FileRef
+         location = "group:/Users/mini_01/Developer/Challenges/GolfCourse.playground">
+      </FileRef>
+   </Group>
+</Workspace>
