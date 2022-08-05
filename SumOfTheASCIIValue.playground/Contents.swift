@@ -1,12 +1,19 @@
 //  Created by MacMini-8G on 14/07/22.
 
 /* MARK: - The Goal
+ You are given a string of characters s. Output the sum of the ASCII value for each character of the string.
+ Input
+ Line 1: A string S
+ Output
+ Line 1: The sum N of ASCII values
+ Example
+ Input
+ An exemple
+ Output
+ 959
  
  */// MARK: The Goal
 
-/* MARK: - Default Code
-
- */// MARK: Default Code
 
 // MARK: - Imports
 
@@ -14,9 +21,31 @@ import Foundation
 import XCTest
 
 // MARK: - Solution 1
-func solution() {}
+/*
+func solution(_ S: String) -> Int {
+    return S.map{
+                Int(
+                    String(
+                        $0.asciiValue!
+                    )
+                )!
+            }.reduce(0, +)
+}
+ */
 
 // MARK: - Solution 2
+/*
+func solution(_ S: String) -> Int {
+    var result = 0
+    
+    for letra in S {
+        let valorAtual = letra.asciiValue ?? 0
+        result += Int(exactly: valorAtual) ?? 0
+    }
+    
+    return result
+}
+ */
 
 // MARK: - Test Cases
 
@@ -38,10 +67,8 @@ public class TestObserver: NSObject, XCTestObservation {
 
 class Tests: XCTestCase {
 
-    var input1: String = ""
-    var input2: String = ""
+    var input: String = ""
     var output: Int = 0
-    var myReport: String = ""
 
     override class func setUp() {
         super.setUp()
@@ -69,51 +96,30 @@ class Tests: XCTestCase {
             print("Result: 🔴 Failed\n")
         }
     }
-
+    
     func test1() {
-        input1 = "4 4 3 4 4 5 4 3 5 4 3 4 5 4 4 3 4 5"
-        input2 = "4 3 2 4 3 4 3 3 4 4 3 4 6 4 5 3 3 4"
-        output = -6
-        XCTAssertEqual(solution(input1, input2), output)
+        input = "An exemple"
+        output = 959
+        XCTAssertEqual(solution(input), output)
     }
 
     func test2() {
-        input1 = "4 4 3 5 3 4 5 4 4 4 5 3 4 4 5 4 3 5"
-        input2 = "6 4 3 5 3 4 4 5 6 5 6 4 5 4 4 5 3 4"
-        output = 7
-        XCTAssertEqual(solution(input1, input2), output)
+        input = "Such abc much amaze"
+        output = 1748
+        XCTAssertEqual(solution(input), output)
     }
 
     func test3() {
-        input1 = "5 4 3 4 4 4 4 3 5 5 4 4 3 4 4 4 3 5"
-        input2 = "6 5 4 4 4 4 4 3 5 5 4 4 3 4 4 4 3 6"
-        output = 4
-        XCTAssertEqual(solution(input1, input2), output)
+        input = "Some Camel Case Are Fun"
+        output = 1971
+        XCTAssertEqual(solution(input), output)
     }
 
     func test4() {
-        input1 = "4 4 4 5 4 3 4 3 4 4 4 5 3 4 4 4 3 4"
-        input2 = "4 4 4 4 4 4 4 3 5 4 4 5 3 5 4 3 2 3"
-        output = -1
-        XCTAssertEqual(
-            solution(input1, input2),
-            output)
+        input = ":;,=)\"(]}[{>ggwpez"
+        output = 1491
+        XCTAssertEqual(solution(input), output)
     }
-
-    func test5() {
-        input1 = "5 4 3 4 4 4 4 3 5 5 4 4 3 4 4 4 3 5"
-        input2 = "5 3 3 4 4 3 4 3 4 5 3 4 3 5 3 3 4 4"
-        output = -5
-        XCTAssertEqual(solution(input1, input2), output)
-    }
-
-    func test6() {
-        input1 = "4 4 3 5 3 4 5 4 4 4 5 3 4 4 5 4 3 5"
-        input2 = "3 4 2 5 3 5 4 5 4 3 5 3 5 4 4 4 7 3"
-        output = 0
-        XCTAssertEqual(solution(input1, input2), output)
-    }
-
 }
 
 Tests.defaultTestSuite.run()

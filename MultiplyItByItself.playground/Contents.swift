@@ -1,12 +1,31 @@
-//  Created by MacMini-8G on 14/07/22.
+//  Created by MacMini-16G on 04/08/22.
 
 /* MARK: - The Goal
- 
+Given a number you must multiply it by itself and all numbers below it and return the total sum of each multiplication.
+
+Example 1:
+Input = 5
+5*5+5*4+5*3+5*2+5*1=75
+return 75
+
+Example 2:
+Input = 3
+3*3+3*2+3*1=18
+return 18
+
+Input
+Line 1: An integer N as the number to use to multiply.
+Output
+Line 1: An integer.
+Constraints
+0 ≤ N ≤ 9999
+Example
+Input
+4
+Output
+40
+
  */// MARK: The Goal
-
-/* MARK: - Default Code
-
- */// MARK: Default Code
 
 // MARK: - Imports
 
@@ -14,7 +33,14 @@ import Foundation
 import XCTest
 
 // MARK: - Solution 1
-func solution() {}
+func solution(_ input: String) -> Int {
+    let input = Int(input)!
+    
+    let result = stride(from: input, to: 0, by: -1).reduce(into: 0) { acumulado, valor in
+        acumulado += valor * input
+    }
+    return result
+}
 
 // MARK: - Solution 2
 
@@ -38,10 +64,8 @@ public class TestObserver: NSObject, XCTestObservation {
 
 class Tests: XCTestCase {
 
-    var input1: String = ""
-    var input2: String = ""
+    var input: String = ""
     var output: Int = 0
-    var myReport: String = ""
 
     override class func setUp() {
         super.setUp()
@@ -71,47 +95,47 @@ class Tests: XCTestCase {
     }
 
     func test1() {
-        input1 = "4 4 3 4 4 5 4 3 5 4 3 4 5 4 4 3 4 5"
-        input2 = "4 3 2 4 3 4 3 3 4 4 3 4 6 4 5 3 3 4"
-        output = -6
-        XCTAssertEqual(solution(input1, input2), output)
+        input = "4"
+        output = 40
+        XCTAssertEqual(solution(input), output)
     }
 
     func test2() {
-        input1 = "4 4 3 5 3 4 5 4 4 4 5 3 4 4 5 4 3 5"
-        input2 = "6 4 3 5 3 4 4 5 6 5 6 4 5 4 4 5 3 4"
-        output = 7
-        XCTAssertEqual(solution(input1, input2), output)
+        input = "5"
+        output = 75
+        XCTAssertEqual(solution(input), output)
     }
 
     func test3() {
-        input1 = "5 4 3 4 4 4 4 3 5 5 4 4 3 4 4 4 3 5"
-        input2 = "6 5 4 4 4 4 4 3 5 5 4 4 3 4 4 4 3 6"
-        output = 4
-        XCTAssertEqual(solution(input1, input2), output)
+        input = "15"
+        output = 1800
+        XCTAssertEqual(solution(input), output)
     }
 
     func test4() {
-        input1 = "4 4 4 5 4 3 4 3 4 4 4 5 3 4 4 4 3 4"
-        input2 = "4 4 4 4 4 4 4 3 5 4 4 5 3 5 4 3 2 3"
-        output = -1
+        input = "58"
+        output = 99238
         XCTAssertEqual(
-            solution(input1, input2),
+            solution(input),
             output)
     }
 
     func test5() {
-        input1 = "5 4 3 4 4 4 4 3 5 5 4 4 3 4 4 4 3 5"
-        input2 = "5 3 3 4 4 3 4 3 4 5 3 4 3 5 3 3 4 4"
-        output = -5
-        XCTAssertEqual(solution(input1, input2), output)
+        input = "502"
+        output = 63379006
+        XCTAssertEqual(solution(input), output)
     }
 
     func test6() {
-        input1 = "4 4 3 5 3 4 5 4 4 4 5 3 4 4 5 4 3 5"
-        input2 = "3 4 2 5 3 5 4 5 4 3 5 3 5 4 4 4 7 3"
+        input = "0"
         output = 0
-        XCTAssertEqual(solution(input1, input2), output)
+        XCTAssertEqual(solution(input), output)
+    }
+    
+    func test7() {
+        input = "5210"
+        output = 70723952550
+        XCTAssertEqual(solution(input), output)
     }
 
 }

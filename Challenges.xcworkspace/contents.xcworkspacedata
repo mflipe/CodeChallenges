@@ -8,10 +8,19 @@
       location = "container:"
       name = "Clash of Code">
       <FileRef
-         location = "group:/Users/mini_01/Developer/CodeChallenges/ChessBoardScore.playground">
+         location = "group:/Users/marcosrocha/Developer/CodeChallenges/SumOfTheASCIIValue.playground">
       </FileRef>
       <FileRef
-         location = "group:/Users/mini_01/Developer/CodeChallenges/TraveledDistance.playground">
+         location = "group:/Users/marcosrocha/Developer/CodeChallenges/MultiplyItByItself.playground">
+      </FileRef>
+      <FileRef
+         location = "group:/Users/marcosrocha/Developer/CodeChallenges/GreatestCommonDivisor.playground">
+      </FileRef>
+      <FileRef
+         location = "group:ChessBoardScore.playground">
+      </FileRef>
+      <FileRef
+         location = "group:TraveledDistance.playground">
       </FileRef>
       <FileRef
          location = "group:GolfCourse.playground">
