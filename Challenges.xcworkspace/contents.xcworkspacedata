@@ -14,6 +14,8 @@
          location = "group:PythagorasTheorem.playground">
       </FileRef>
       <FileRef
+         location = "group:ReversePyramid.playground">
+      </FileRef>
          location = "group:NMinusReversedN.playground">
       </FileRef>
       <FileRef
