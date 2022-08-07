@@ -36,7 +36,6 @@ func solution(_ input: String) -> Int {
     return result
 }
 
-
 // MARK: - Solution 2
 /*
 func solution(_ input: String) -> Int {
