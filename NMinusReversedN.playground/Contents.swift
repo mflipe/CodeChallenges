@@ -1,28 +1,22 @@
-//  Created by MacMini-16G on 03/08/22.
+//  Created by MacMini-8G on 14/07/22.
 
 /* MARK: - The Goal
+ Given a number N, print N minus N where all digits have been reversed.
+
+ 2 -> (reversed) 2 -> 2-2 = 0
+ 57-> (reversed) 75 -> 57-75 = -18
+ Input
+ Line 1: An integer N
+ Output
+ Line 1: N minus N where all digits have been reversed.
+ Constraints
+ 0 ≤ N ≤ 10000
+ Example
+ Input
+ 7
+ Output
+ 0
  
-The program:
-Your program must find the greatest common divisor for two integers.
-
-The greatest common divisor of two integers is the largest positive integer that divides the numbers without
- a remainder.
-
-INPUT:
-Two integer numbers separated by a whitespace, a and b.
-
-OUTPUT:
-The greatest common divisor of a and b.
-
-CONSTRAINTS:
-0 < a,b ≤ 1000000
-
-EXAMPLE:
-Input
-169 104
-Output
-13
-
  */// MARK: The Goal
 
 // MARK: - Imports
@@ -31,47 +25,28 @@ import Foundation
 import XCTest
 
 // MARK: - Solution 1
-// Executed 6 tests, with 0 failures (0 unexpected) in 0.632 (0.634) seconds
-/*
-func solution(_ input: [String]) -> Int {
-    var a = Int(input[0])!
-    var b = Int(input[1])!
-    
-    while a != b {
-        if a > b {
-            a = a - b
-        } else {
-            b = b - a
-        }
-    }
-    
-    return a
+func solution(_ input: String) -> Int {
+    let number = input
+    let reversedNumber = String(number.reversed())
+    return Int(number)! - Int(reversedNumber)!
 }
- */
-
-// MARK: - Solution 2
-// Executed 6 tests, with 0 failures (0 unexpected) in 0.024 (0.026) seconds
-/*
-func solution(_ input: [String]) -> Int {
-    
-    let m = Int(input[0])!
-    let n = Int(input[1])!
-    
-    var a: Int = 0
-    var b: Int = max(m, n)
-    var r: Int = min(m, n)
-    
-    while r != 0 {
-        a = b
-        b = r
-        r = a % b
-    }
-    
-    return b
-}
- */
 
 // MARK: - Test Cases
+
+/*
+ Found: 7
+ Expected: 0
+ 
+ Found: 13
+ Expected: -18
+ 
+ Found: 1751
+ Expected: 180
+ 
+ Found: 9030
+ Expected: 8721
+ 
+ */
 
 public class TestObserver: NSObject, XCTestObservation {
     public func testCase(_ testCase: XCTestCase,
@@ -91,7 +66,7 @@ public class TestObserver: NSObject, XCTestObservation {
 
 class Tests: XCTestCase {
 
-    var input: [String] = []
+    var input: String = ""
     var output: Int = 0
 
     override class func setUp() {
@@ -122,41 +97,28 @@ class Tests: XCTestCase {
     }
 
     func test1() {
-        input = ["169", "104"]
-        output = 13
+        input = "7"
+        output = 0
         XCTAssertEqual(solution(input), output)
     }
 
     func test2() {
-        input = ["100", "250"]
-        output = 50
+        input = "13"
+        output = -18
         XCTAssertEqual(solution(input), output)
     }
 
     func test3() {
-        input = ["1", "1"]
-        output = 1
+        input = "1751"
+        output = 180
         XCTAssertEqual(solution(input), output)
     }
 
     func test4() {
-        input = ["1000000", "5"]
-        output = 5
+        input = "9030"
+        output = 8721
         XCTAssertEqual(solution(input), output)
     }
-
-    func test5() {
-        input = ["104711", "104717"]
-        output = 1
-        XCTAssertEqual(solution(input), output)
-    }
-
-    func test6() {
-        input = ["98304", "65536"]
-        output = 32768
-        XCTAssertEqual(solution(input), output)
-    }
-
 }
 
 Tests.defaultTestSuite.run()

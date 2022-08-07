@@ -14,7 +14,6 @@
  
  */// MARK: The Goal
 
-
 // MARK: - Imports
 
 import Foundation
@@ -96,7 +95,7 @@ class Tests: XCTestCase {
             print("Result: 🔴 Failed\n")
         }
     }
-    
+
     func test1() {
         input = "An exemple"
         output = 959
