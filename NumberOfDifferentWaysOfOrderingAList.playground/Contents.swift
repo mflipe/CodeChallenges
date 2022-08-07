@@ -23,27 +23,27 @@ import XCTest
 
 // MARK: - Solution 1
 func solution(_ input: String) -> Int {
-    let n = Int(input)!
-
+    let number = Int(input)!
+    
     // Forma 1:
-    // let result = Int(exactly:(1...n).map(Double.init).reduce(1.0, *))!
-
+    //let result = Int(exactly:(1...number).map(Double.init).reduce(1.0, *))!
+    
     // Forma 2:
-    let range = (1...n).map(Double.init)
+    let range = (1...number).map(Double.init)
     let value = range.reduce(1.0, *)
     let result = Int(exactly: value)!
-
+    
     return result
 }
 
 // MARK: - Solution 2
 /*
 func solution(_ input: String) -> Int {
-    let n = Int(input)!
-    if n == 0 {
+    let number = Int(input)!
+    if number == 0 {
         return 1
     }
-    return n * solution(String(n-1))
+    return number * solution(String(number-1))
 }
 */
 
