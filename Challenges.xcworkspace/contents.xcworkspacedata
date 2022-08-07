@@ -18,6 +18,9 @@
       </FileRef>
       <FileRef
          location = "group:/Users/marcosrocha/Developer/CodeChallenges/GreatestCommonDivisor.playground">
+      <FileRef
+         location = "group:ReversePyramid.playground">
+      </FileRef>
       </FileRef>
       <FileRef
          location = "group:ChessBoardScore.playground">
