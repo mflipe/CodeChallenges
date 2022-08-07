@@ -8,13 +8,28 @@
       location = "container:"
       name = "Clash of Code">
       <FileRef
-         location = "group:/Users/marcosrocha/Developer/CodeChallenges/SumOfTheASCIIValue.playground">
+         location = "group:NumberOfDifferentWaysOfOrderingAList.playground">
       </FileRef>
       <FileRef
-         location = "group:/Users/marcosrocha/Developer/CodeChallenges/MultiplyItByItself.playground">
+         location = "group:PythagorasTheorem.playground">
       </FileRef>
       <FileRef
-         location = "group:/Users/marcosrocha/Developer/CodeChallenges/GreatestCommonDivisor.playground">
+         location = "group:NMinusReversedN.playground">
+      </FileRef>
+      <FileRef
+         location = "group:EVALorPUSH.playground">
+      </FileRef>
+      <FileRef
+         location = "group:SizeOfRange.playground">
+      </FileRef>
+      <FileRef
+         location = "group:SumOfTheASCIIValue.playground">
+      </FileRef>
+      <FileRef
+         location = "group:MultiplyItByItself.playground">
+      </FileRef>
+      <FileRef
+         location = "group:GreatestCommonDivisor.playground">
       </FileRef>
       <FileRef
          location = "group:ChessBoardScore.playground">

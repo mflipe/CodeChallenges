@@ -1,28 +1,31 @@
-//  Created by MacMini-16G on 03/08/22.
+//  Created by MacMini-8G on 14/07/22.
 
 /* MARK: - The Goal
+ Short statement : From the two sides adjacent to a right angle in a right triangle,
+ determine the size of the third side.
+ Remember: a² + b² = c².
+
+ Long statement : Perched on his tower, our friend Pythagoras looked down and asked:
+ "What is the distance "c" between that sheep in the distance and me?
+ In order to determine this distance, Pythagoras knew in advance the distance "a" between the sheep and the tower,
+ and the height "b" of the tower.
+ Assuming that the tower was perpendicular to the ground, he came to the conclusion that a² + b² = c².
+ Help our friend determine the distance from the sheep.
  
-The program:
-Your program must find the greatest common divisor for two integers.
-
-The greatest common divisor of two integers is the largest positive integer that divides the numbers without
- a remainder.
-
-INPUT:
-Two integer numbers separated by a whitespace, a and b.
-
-OUTPUT:
-The greatest common divisor of a and b.
-
-CONSTRAINTS:
-0 < a,b ≤ 1000000
-
-EXAMPLE:
-Input
-169 104
-Output
-13
-
+ Input
+ First line : a float a for the distance between the bottom of the tower and the sheep
+ Second line : a float b for the height of the tower
+ Output
+ First line : the distance between the top of the tower and the sheep rounded to two decimal places
+ Constraints
+ 1 ≤ a, b≤ 15000
+ Example
+ Input
+ 1.00
+ 1.00
+ Output
+ 1.41
+ 
  */// MARK: The Goal
 
 // MARK: - Imports
@@ -31,45 +34,12 @@ import Foundation
 import XCTest
 
 // MARK: - Solution 1
-// Executed 6 tests, with 0 failures (0 unexpected) in 0.632 (0.634) seconds
-/*
-func solution(_ input: [String]) -> Int {
-    var a = Int(input[0])!
-    var b = Int(input[1])!
-    
-    while a != b {
-        if a > b {
-            a = a - b
-        } else {
-            b = b - a
-        }
-    }
-    
-    return a
+func solution(_ input: [Double]) -> String {
+     let firstNumber = input[0]
+     let SecondNumber = input[1]
+     let Result = sqrt( pow(firstNumber, 2) + pow(SecondNumber, 2) )
+     return String(format: "%.2f", Result)
 }
- */
-
-// MARK: - Solution 2
-// Executed 6 tests, with 0 failures (0 unexpected) in 0.024 (0.026) seconds
-/*
-func solution(_ input: [String]) -> Int {
-    
-    let m = Int(input[0])!
-    let n = Int(input[1])!
-    
-    var a: Int = 0
-    var b: Int = max(m, n)
-    var r: Int = min(m, n)
-    
-    while r != 0 {
-        a = b
-        b = r
-        r = a % b
-    }
-    
-    return b
-}
- */
 
 // MARK: - Test Cases
 
@@ -91,8 +61,8 @@ public class TestObserver: NSObject, XCTestObservation {
 
 class Tests: XCTestCase {
 
-    var input: [String] = []
-    var output: Int = 0
+    var input: [Double] = []
+    var output: String = "1.41"
 
     override class func setUp() {
         super.setUp()
@@ -122,41 +92,28 @@ class Tests: XCTestCase {
     }
 
     func test1() {
-        input = ["169", "104"]
-        output = 13
+        input = [1.0, 1.0]
+        output = "1.41"
         XCTAssertEqual(solution(input), output)
     }
 
     func test2() {
-        input = ["100", "250"]
-        output = 50
+        input = [6.0, 3.0]
+        output = "6.71"
         XCTAssertEqual(solution(input), output)
     }
 
     func test3() {
-        input = ["1", "1"]
-        output = 1
+        input = [2.0, 7.0]
+        output = "7.28"
         XCTAssertEqual(solution(input), output)
     }
 
     func test4() {
-        input = ["1000000", "5"]
-        output = 5
+        input = [6535.94, 7634.0]
+        output = "10049.70"
         XCTAssertEqual(solution(input), output)
     }
-
-    func test5() {
-        input = ["104711", "104717"]
-        output = 1
-        XCTAssertEqual(solution(input), output)
-    }
-
-    func test6() {
-        input = ["98304", "65536"]
-        output = 32768
-        XCTAssertEqual(solution(input), output)
-    }
-
 }
 
 Tests.defaultTestSuite.run()
