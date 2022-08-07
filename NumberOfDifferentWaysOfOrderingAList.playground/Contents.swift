@@ -1,28 +1,19 @@
-//  Created by MacMini-16G on 03/08/22.
+//  Created by MacMini-8G on 14/07/22.
 
 /* MARK: - The Goal
+ Find the number of different ways of ordering a list of n elements.
+ Input
+ Line 1: An integer n for the number of elements to be ordered.
+ Output
+ Line 1: An integer corresponding to the number of different ways the list can be ordered.
+ Constraints
+ 1<=n<=20
+ Example
+ Input
+ 4
+ Output
+ 24
  
-The program:
-Your program must find the greatest common divisor for two integers.
-
-The greatest common divisor of two integers is the largest positive integer that divides the numbers without
- a remainder.
-
-INPUT:
-Two integer numbers separated by a whitespace, a and b.
-
-OUTPUT:
-The greatest common divisor of a and b.
-
-CONSTRAINTS:
-0 < a,b ≤ 1000000
-
-EXAMPLE:
-Input
-169 104
-Output
-13
-
  */// MARK: The Goal
 
 // MARK: - Imports
@@ -31,45 +22,30 @@ import Foundation
 import XCTest
 
 // MARK: - Solution 1
-// Executed 6 tests, with 0 failures (0 unexpected) in 0.632 (0.634) seconds
-/*
-func solution(_ input: [String]) -> Int {
-    var a = Int(input[0])!
-    var b = Int(input[1])!
-    
-    while a != b {
-        if a > b {
-            a = a - b
-        } else {
-            b = b - a
-        }
-    }
-    
-    return a
+func solution(_ input: String) -> Int {
+    let n = Int(input)!
+
+    // Forma 1:
+    // let result = Int(exactly:(1...n).map(Double.init).reduce(1.0, *))!
+
+    // Forma 2:
+    let range = (1...n).map(Double.init)
+    let value = range.reduce(1.0, *)
+    let result = Int(exactly: value)!
+
+    return result
 }
- */
 
 // MARK: - Solution 2
-// Executed 6 tests, with 0 failures (0 unexpected) in 0.024 (0.026) seconds
 /*
-func solution(_ input: [String]) -> Int {
-    
-    let m = Int(input[0])!
-    let n = Int(input[1])!
-    
-    var a: Int = 0
-    var b: Int = max(m, n)
-    var r: Int = min(m, n)
-    
-    while r != 0 {
-        a = b
-        b = r
-        r = a % b
+func solution(_ input: String) -> Int {
+    let n = Int(input)!
+    if n == 0 {
+        return 1
     }
-    
-    return b
+    return n * solution(String(n-1))
 }
- */
+*/
 
 // MARK: - Test Cases
 
@@ -91,7 +67,7 @@ public class TestObserver: NSObject, XCTestObservation {
 
 class Tests: XCTestCase {
 
-    var input: [String] = []
+    var input: String = ""
     var output: Int = 0
 
     override class func setUp() {
@@ -122,38 +98,26 @@ class Tests: XCTestCase {
     }
 
     func test1() {
-        input = ["169", "104"]
-        output = 13
+        input = "4"
+        output = 24
         XCTAssertEqual(solution(input), output)
     }
 
     func test2() {
-        input = ["100", "250"]
-        output = 50
+        input = "3"
+        output = 6
         XCTAssertEqual(solution(input), output)
     }
 
     func test3() {
-        input = ["1", "1"]
+        input = "1"
         output = 1
         XCTAssertEqual(solution(input), output)
     }
 
     func test4() {
-        input = ["1000000", "5"]
-        output = 5
-        XCTAssertEqual(solution(input), output)
-    }
-
-    func test5() {
-        input = ["104711", "104717"]
-        output = 1
-        XCTAssertEqual(solution(input), output)
-    }
-
-    func test6() {
-        input = ["98304", "65536"]
-        output = 32768
+        input = "14"
+        output = 87178291200
         XCTAssertEqual(solution(input), output)
     }
 
