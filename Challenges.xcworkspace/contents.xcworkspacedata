@@ -8,9 +8,6 @@
       location = "container:"
       name = "Clash of Code">
       <FileRef
-         location = "group:NumberOfDifferentWaysOfOrderingAList.playground">
-      </FileRef>
-      <FileRef
          location = "group:/Users/marcosrocha/Developer/CodeChallenges/SumOfTheASCIIValue.playground">
       </FileRef>
       <FileRef
