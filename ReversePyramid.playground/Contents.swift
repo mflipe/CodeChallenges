@@ -106,7 +106,7 @@ class Tests: XCTestCase {
         ]
         XCTAssertEqual(solution(input), output)
     }
-    
+
     func test3() {
         input = "4"
         output = [
@@ -117,7 +117,7 @@ class Tests: XCTestCase {
         ]
         XCTAssertEqual(solution(input), output)
     }
-    
+
     func test4() {
         input = "5"
         output = [
@@ -142,7 +142,7 @@ class Tests: XCTestCase {
         ]
         XCTAssertEqual(solution(input), output)
     }
-    
+
     func test6() {
         input = "7"
         output = [
