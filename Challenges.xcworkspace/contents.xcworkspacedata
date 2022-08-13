@@ -8,6 +8,15 @@
       location = "container:"
       name = "Clash of Code">
       <FileRef
+         location = "group:SumWithReset.playground">
+      </FileRef>
+      <FileRef
+         location = "group:FilterOddNumbers.playground">
+      </FileRef>
+      <FileRef
+         location = "group:midpoint.playground">
+      </FileRef>
+      <FileRef
          location = "group:NumberOfDifferentWaysOfOrderingAList.playground">
       </FileRef>
       <FileRef
@@ -16,6 +25,7 @@
       <FileRef
          location = "group:ReversePyramid.playground">
       </FileRef>
+      <FileRef
          location = "group:NMinusReversedN.playground">
       </FileRef>
       <FileRef
