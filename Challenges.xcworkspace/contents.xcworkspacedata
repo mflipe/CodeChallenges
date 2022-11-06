@@ -8,6 +8,21 @@
       location = "container:"
       name = "Clash of Code">
       <FileRef
+         location = "group:/Users/marcosrocha/Developer/CodeChallenges/StringConcatenationDependingOnSum.playground">
+      </FileRef>
+      <FileRef
+         location = "group:/Users/marcosrocha/Developer/CodeChallenges/StringRepeatedNTimes.playground">
+      </FileRef>
+      <FileRef
+         location = "group:SumWithReset.playground">
+      </FileRef>
+      <FileRef
+         location = "group:FilterOddNumbers.playground">
+      </FileRef>
+      <FileRef
+         location = "group:midpoint.playground">
+      </FileRef>
+      <FileRef
          location = "group:NumberOfDifferentWaysOfOrderingAList.playground">
       </FileRef>
       <FileRef
@@ -16,6 +31,7 @@
       <FileRef
          location = "group:ReversePyramid.playground">
       </FileRef>
+      <FileRef
          location = "group:NMinusReversedN.playground">
       </FileRef>
       <FileRef
