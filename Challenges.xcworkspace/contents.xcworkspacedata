@@ -8,6 +8,12 @@
       location = "container:"
       name = "Clash of Code">
       <FileRef
+         location = "group:/Users/marcosrocha/Developer/CodeChallenges/StringConcatenationDependingOnSum.playground">
+      </FileRef>
+      <FileRef
+         location = "group:/Users/marcosrocha/Developer/CodeChallenges/StringRepeatedNTimes.playground">
+      </FileRef>
+      <FileRef
          location = "group:SumWithReset.playground">
       </FileRef>
       <FileRef
