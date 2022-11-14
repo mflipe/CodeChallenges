@@ -51,7 +51,6 @@ func solution(_ input: [String]) -> Int {
 
 // MARK: - Solution 2
 // Executed 6 tests, with 0 failures (0 unexpected) in 0.024 (0.026) seconds
-/*
 func solution(_ input: [String]) -> Int {
     
     let m = Int(input[0])!
@@ -69,26 +68,8 @@ func solution(_ input: [String]) -> Int {
     
     return b
 }
- */
 
 // MARK: - Test Cases
-
-public class TestObserver: NSObject, XCTestObservation {
-    public func testCase(_ testCase: XCTestCase,
-                           didFailWithDescription description: String,
-                           inFile filePath: String?,
-                           atLine lineNumber: Int) {
-        // print("1️⃣ failure description: \(description)")
-        print("2️⃣ failed test case: \(testCase)")
-        /*
-        if let filePath = filePath {
-            print("3️⃣ failure at file path: \(filePath)")
-        }
-        print("4️⃣ failure at line: \(lineNumber)")
-        */
-    }
-}
-
 class Tests: XCTestCase {
 
     var input: [String] = []
@@ -96,7 +77,6 @@ class Tests: XCTestCase {
 
     override class func setUp() {
         super.setUp()
-        // XCTestObservationCenter.shared.addTestObserver(TestObserver())
     }
 
     override class func tearDown() {

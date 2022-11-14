@@ -20,7 +20,6 @@ import Foundation
 import XCTest
 
 // MARK: - Solution 1
-/*
 func solution(_ S: String) -> Int {
     return S.map{
                 Int(
@@ -30,7 +29,6 @@ func solution(_ S: String) -> Int {
                 )!
             }.reduce(0, +)
 }
- */
 
 // MARK: - Solution 2
 /*
@@ -47,23 +45,6 @@ func solution(_ S: String) -> Int {
  */
 
 // MARK: - Test Cases
-
-public class TestObserver: NSObject, XCTestObservation {
-    public func testCase(_ testCase: XCTestCase,
-                           didFailWithDescription description: String,
-                           inFile filePath: String?,
-                           atLine lineNumber: Int) {
-        // print("1️⃣ failure description: \(description)")
-        print("2️⃣ failed test case: \(testCase)")
-        /*
-        if let filePath = filePath {
-            print("3️⃣ failure at file path: \(filePath)")
-        }
-        print("4️⃣ failure at line: \(lineNumber)")
-        */
-    }
-}
-
 class Tests: XCTestCase {
 
     var input: String = ""
@@ -71,7 +52,6 @@ class Tests: XCTestCase {
 
     override class func setUp() {
         super.setUp()
-        // XCTestObservationCenter.shared.addTestObserver(TestObserver())
     }
 
     override class func tearDown() {

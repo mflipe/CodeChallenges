@@ -1,5 +1,3 @@
-//  Created by MacMini-8G on 15/07/22.
-
 /* MARK: - The Goal
  The program:
  You must output for each participant in a race the traveled distance (in meters) at a given speed S (centimeters/second) in given amount of time T (minutes).
@@ -20,36 +18,9 @@
  1              120
  20 10
  
-*/// MARK: The Goal
-
-/* MARK: - Default Code
- 
- public struct StderrOutputStream: TextOutputStream {
-     public mutating func write(_ string: String) { fputs(string, stderr) }
- }
- public var errStream = StderrOutputStream()
-
- /**
-  * Auto-generated code below aims at helping you parse
-  * the standard input according to the problem statement.
-  **/
-
- let N = Int(readLine()!)!
- if N > 0 {
-     for i in 0...(N-1) {
-         let inputs = (readLine()!).split(separator: " ").map(String.init)
-         let S = Int(inputs[0])!
-         let T = Int(inputs[1])!
-     }
- }
-
- // Write an answer using print("message...")
- // To debug: print("Debug messages...", to: &errStream)
-
- print("answer") */// MARK: Default Code
+*/
 
 // MARK: - Imports
-
 import Foundation
 import XCTest
 
@@ -89,23 +60,6 @@ func solution(_ N: Int, _ inputs: [String]) -> [Int] {
 }
 
 // MARK: - Test Cases
-
-public class TestObserver: NSObject, XCTestObservation {
-    public func testCase(_ testCase: XCTestCase,
-                           didFailWithDescription description: String,
-                           inFile filePath: String?,
-                           atLine lineNumber: Int) {
-        // print("1️⃣ failure description: \(description)")
-        print("2️⃣ failed test case: \(testCase)")
-        /*
-        if let filePath = filePath {
-            print("3️⃣ failure at file path: \(filePath)")
-        }
-        print("4️⃣ failure at line: \(lineNumber)")
-        */
-    }
-}
-
 class Tests: XCTestCase {
 
     var N: Int = 0
@@ -114,7 +68,6 @@ class Tests: XCTestCase {
 
     override class func setUp() {
         super.setUp()
-        // XCTestObservationCenter.shared.addTestObserver(TestObserver())
     }
 
     override class func tearDown() {

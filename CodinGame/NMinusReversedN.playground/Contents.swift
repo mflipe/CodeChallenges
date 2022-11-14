@@ -32,38 +32,6 @@ func solution(_ input: String) -> Int {
 }
 
 // MARK: - Test Cases
-
-/*
- Found: 7
- Expected: 0
- 
- Found: 13
- Expected: -18
- 
- Found: 1751
- Expected: 180
- 
- Found: 9030
- Expected: 8721
- 
- */
-
-public class TestObserver: NSObject, XCTestObservation {
-    public func testCase(_ testCase: XCTestCase,
-                           didFailWithDescription description: String,
-                           inFile filePath: String?,
-                           atLine lineNumber: Int) {
-        // print("1️⃣ failure description: \(description)")
-        print("2️⃣ failed test case: \(testCase)")
-        /*
-        if let filePath = filePath {
-            print("3️⃣ failure at file path: \(filePath)")
-        }
-        print("4️⃣ failure at line: \(lineNumber)")
-        */
-    }
-}
-
 class Tests: XCTestCase {
 
     var input: String = ""

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:CodeSignal"
+      name = "CodeSignal">
+      <Group
+         location = "group:Intro"
+         name = "Intro">
+         <Group
+            location = "group:8-matrixElementsSum"
+            name = "8-matrixElementsSum">
+            <FileRef
+               location = "group:matrixElementsSum.playground">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:7-almostIncreasingSequence"
+            name = "7-almostIncreasingSequence">
+            <FileRef
+               location = "group:almostIncreasingSequence.playground">
+            </FileRef>
+         </Group>
+      </Group>
+   </Group>
+   <Group
+      location = "group:CodinGame"
+      name = "CodinGame">
+      <FileRef
+         location = "group:Example.playground">
+      </FileRef>
+      <FileRef
+         location = "group:ChessBoardScore.playground">
+      </FileRef>
+      <FileRef
+         location = "group:MultiplyItByItself.playground">
+      </FileRef>
+      <FileRef
+         location = "group:SizeOfRange.playground">
+      </FileRef>
+      <FileRef
+         location = "group:NumberOfDifferentWaysOfOrderingAList.playground">
+      </FileRef>
+      <FileRef
+         location = "group:PythagorasTheorem.playground">
+      </FileRef>
+      <FileRef
+         location = "group:SumOfTheASCIIValue.playground">
+      </FileRef>
+      <FileRef
+         location = "group:GolfCourse.playground">
+      </FileRef>
+      <FileRef
+         location = "group:TraveledDistance.playground">
+      </FileRef>
+      <FileRef
+         location = "group:EVALorPUSH.playground">
+      </FileRef>
+      <FileRef
+         location = "group:ReversePyramid.playground">
+      </FileRef>
+      <FileRef
+         location = "group:GreatestCommonDivisor.playground">
+      </FileRef>
+      <FileRef
+         location = "group:NMinusReversedN.playground">
+      </FileRef>
+   </Group>
+</Workspace>
