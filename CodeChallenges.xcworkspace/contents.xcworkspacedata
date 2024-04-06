@@ -8,6 +8,13 @@
          location = "group:Intro"
          name = "Intro">
          <Group
+            location = "container:"
+            name = "13-reverseInParentheses">
+            <FileRef
+               location = "group:/Users/marcosrocha/Developer/CodeChallenges/reverseInParentheses.playground">
+            </FileRef>
+         </Group>
+         <Group
             location = "group:8-matrixElementsSum"
             name = "8-matrixElementsSum">
             <FileRef
@@ -28,6 +35,12 @@
       name = "CodinGame">
       <FileRef
          location = "group:Example.playground">
+      </FileRef>
+      <FileRef
+         location = "group:vDSP.playground">
+      </FileRef>
+      <FileRef
+         location = "group:OnePiece.playground">
       </FileRef>
       <FileRef
          location = "group:ChessBoardScore.playground">
