@@ -2,6 +2,13 @@
 <Workspace
    version = "1.0">
    <Group
+      location = "container:"
+      name = "Avulso">
+      <FileRef
+         location = "group:Avulso/SpiralMatrix.playground">
+      </FileRef>
+   </Group>
+   <Group
       location = "group:CodeSignal"
       name = "CodeSignal">
       <Group
